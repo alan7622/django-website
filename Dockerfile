@@ -19,6 +19,8 @@ RUN pip install -r ./requirements/prod.txt
 
 COPY manage.py ./manage.py
 COPY setup.cfg ./setup.cfg
+COPY Makefile ./Makefile
+COPY static ./static
 COPY alan_website ./alan_website
 
 EXPOSE 8000
