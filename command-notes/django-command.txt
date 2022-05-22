@@ -1,0 +1,14 @@
+# Creates bilerplate django files
+django-admin startproject <project-name>
+
+# Creates app folder and files
+python manage.py start app <app-name>
+
+# Preps out database for migrations
+python manage.py makemigrations
+
+# Executes out migrations & updates the database
+python manage.py migrate
+
+# Creates a user with admin level permissions
+python manage.py createsuperuser

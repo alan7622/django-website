@@ -1,0 +1,10 @@
+# see all dependencies install
+pip freeze 
+pip freeze > requirements.txt
+
+# install dependencies in requirements.txt
+pip install -r requirements.txt
+
+# uninstall dependencies you don't want
+pip uninstall package_name
+

@@ -1,0 +1,25 @@
+# run server
+
+python manage.py runserver 
+
+# In case of MAC users, go to Terminal and do the following
+
+lsof -i :8000
+kill -9 PID 
+
+# add five line on top of ~./zshrc
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+
+#python manage.py createsuperuser
+
+Username: alan7622
+Email: alan7622@gmail.com
+Password: A17001421100
+
+

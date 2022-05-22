@@ -1,0 +1,47 @@
+# helm create django-website  
+
+# helm upgrade --install django-tutorial ./helm/django-website/  
+if a release by this name doesn't already exist, run an install
+
+# kubectl get pod
+see if there is pod running
+
+# kubectl delete pod django-tutorial-django-website-5b55dfbcd8-c2w7x
+delete pod, if can't delete then delete statefulset
+
+# kubectl get statefulset --all-namespaces  
+get all statefulset running
+
+# kubectl delete statefulsets django-tutorial-postgresql
+delete statefulsets in kubernetes 
+
+# kubectl --namespace default port-forward $POD_NAME 8080:$CONTAINER_PORT (# check in deployment.yaml)
+ex: kubectl --namespace default port-forward django-tutorial-django-website-78578f9856-pfht9 8080:80 
+
+port foward to use the application inside pod is port 80 -> map to outside 8080
+
+# helm delete django-tutorial 
+remove prior release, release create 
+
+# kubectl create secret docker-registry regred --docker-server=https://index.docker.io/v2/ --docker-username=USERNAME --docker-password=PASSWORD --docker-email=EMAIL
+create secret credential to pull private docker image on docker hub
+
+# helm upgrade --install --dry-run --debug django-tutorial ./helm/django-website/  
+will attempt to push helm-release in the cluster but will not actually do it -> debug, testing purpose
+
+# kubectl logs django-tutorial-django-website-6c4c976d74-b98bt
+see logs for the pod
+
+
+
+
+
+# helm repo add bitnami https://charts.bitnami.com/bitnami
+add helm chart in kubernetes
+
+# helm install my-release bitnami/postgresql
+download postgres charts from bitnamin in helm
+
+# helm dep up
+update charts/ based on the contents of Chart.yaml
+

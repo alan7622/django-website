@@ -1,0 +1,5 @@
+# make compose-manage-py cmd="createsuperuser"  
+create superuser in postgres
+
+# make compose-manage-py cmd="makemigrations"  
+create migrations in django db
