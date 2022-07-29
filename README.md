@@ -16,5 +16,5 @@ docker pull alan7622/alan-website
 make helm-deploy
 kubectl get pod
 kubectl --namespace default port-forward django-tutorial-django-website-78578f9856-pfht9 8080:80 
-elm delete django-tutorial 
+helm delete django-tutorial 
 ```
