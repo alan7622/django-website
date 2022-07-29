@@ -7,6 +7,9 @@
 
 Install kubectl and helm
 
+# Pull the Docker image from docker hub
+docker pull alan7622/alan-website
+
 ## Deploy the application to Kubernetes using helm chart
 
 ```
