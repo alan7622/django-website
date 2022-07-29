@@ -1,4 +1,5 @@
 # helm create django-website  
+create helm chart 
 
 # helm upgrade --install django-tutorial ./helm/django-website/  
 if a release by this name doesn't already exist, run an install
@@ -34,7 +35,7 @@ see logs for the pod
 
 
 
-
+### add postgres chart
 
 # helm repo add bitnami https://charts.bitnami.com/bitnami
 add helm chart in kubernetes
