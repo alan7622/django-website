@@ -1,16 +1,25 @@
-# django-website-tutorial
-Project files for the Django Website Tutorial
+# Introduction
 
-1. Install kubectl and helm in your local
+1. Django website using Django, Python, Postgres and Docker-Compose
+2. Utilized Helm to manage and update deployment of the website on the Kubernetes cluster
 
+# Prerequisites
 
-2. make helm-deploy  or  helm upgrade --install django-tutorial ./helm/django-website/ 
+Install kubectl and helm
 
-3. kubectl get pod
+# Project Setup
 
-4. kubectl --namespace default port-forward $POD_NAME 8080:$CONTAINER_PORT (# check in deployment.yaml)
-ex: kubectl --namespace default port-forward django-tutorial-django-website-78578f9856-pfht9 8080:80 
+## Install Packages
 
+Install dependencies
 
-5. stop kubernetes pod, remove prior release, release create -> helm delete django-tutorial 
- 
+`$ npm install`
+
+## Deploy the application to Kubernetes using helm chart
+
+```
+make helm-deploy
+kubectl get pod
+kubectl --namespace default port-forward django-tutorial-django-website-78578f9856-pfht9 8080:80 
+elm delete django-tutorial 
+```
