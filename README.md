@@ -7,14 +7,6 @@
 
 Install kubectl and helm
 
-# Project Setup
-
-## Install Packages
-
-Install dependencies
-
-`$ npm install`
-
 ## Deploy the application to Kubernetes using helm chart
 
 ```
